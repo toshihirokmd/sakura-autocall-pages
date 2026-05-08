@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sakura-autocall プライバシーポリシー</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans',
+          'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+        max-width: 760px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+        line-height: 1.7;
+        color: #222;
+      }
+      h1 { font-size: 1.6rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+      h2 { font-size: 1.2rem; margin-top: 2rem; }
+      ul { padding-left: 1.5em; }
+      li { margin-bottom: 0.4em; }
+      .meta { color: #666; font-size: 0.9rem; }
+      .last-updated { margin-top: 3rem; color: #888; font-size: 0.9rem; }
+      code { background: #f5f5f5; padding: 0.1em 0.4em; border-radius: 3px; }
+    </style>
+  </head>
+  <body>
+    <h1>sakura-autocall プライバシーポリシー</h1>
+    <p class="meta">本拡張機能（以下「本拡張」）は株式会社さくらフォレストの社内業務用ツールです。本プライバシーポリシーは、本拡張がユーザーのデータをどのように扱うかを説明します。</p>
+
+    <h2>1. 収集するデータ</h2>
+    <p>本拡張は、ユーザーの操作のために以下のデータをローカルのブラウザストレージ（<code>chrome.storage.local</code>）に保存します。</p>
+    <ul>
+      <li>連動対象のスプレッドシートID</li>
+      <li>選択中のシート名</li>
+      <li>取り込み件数（数値）</li>
+      <li>発信間隔の秒数（数値）</li>
+      <li>担当者名（ユーザー自身が入力した名前）</li>
+    </ul>
+    <p>これらのデータは、ユーザーの設定として保存され、外部サーバーには送信されません。</p>
+
+    <h2>2. アクセスする外部サービス</h2>
+    <p>本拡張は、業務遂行のために以下の外部サービスにアクセスします。</p>
+    <ul>
+      <li><strong>Google Sheets API</strong>: ユーザーが指定したスプレッドシートに対する読み取り・書き込み（OAuth 認可済みのユーザーのアクセス権の範囲内のみ）</li>
+      <li><strong>Google OAuth サービス</strong>: ユーザーの Google アカウントによる認証</li>
+      <li><strong>HybridConnect</strong>（<code>https://www.hybridconnect.jp/index/*</code>）: コールセンター業務システム上の通話操作の自動化（DOM 経由）</li>
+    </ul>
+
+    <h2>3. データの使用目的</h2>
+    <p>収集および外部サービスから取得するデータは、以下の単一目的にのみ利用します。</p>
+    <ul>
+      <li>スプレッドシートから「未取り込み」の電話番号を取得して連続発信の対象にする</li>
+      <li>取り込んだ番号にオペレータ名と取り込みフラグを書き戻す（重複発信防止のため）</li>
+      <li>各通話の結果（会話・留守電・本人不在・成功・提案のみ・拾い上げ商材）をスプレッドシートに記録する</li>
+      <li>HybridConnect 上の発信ボタン・終話ボタン・保留ボタンを自動操作する</li>
+    </ul>
+
+    <h2>4. データの送信・共有</h2>
+    <p>本拡張は、以下を行いません。</p>
+    <ul>
+      <li>収集した設定データを開発者・第三者に送信しない</li>
+      <li>分析・広告・マーケティング目的でデータを使用しない</li>
+      <li>第三者にデータを販売・提供しない</li>
+    </ul>
+    <p>Google Sheets / OAuth / HybridConnect への通信は、ユーザーが自ら所有・利用するアカウントの権限内で、対応サービスとの直接通信のみで完結します。</p>
+
+    <h2>5. データの削除</h2>
+    <p>本拡張をアンインストールすると、ローカルに保存された設定データは Chrome により自動的に削除されます。スプレッドシート上のデータは、ユーザーがスプレッドシート側で削除する必要があります。</p>
+
+    <h2>6. 認証情報の取り扱い</h2>
+    <p>Google OAuth のアクセストークンは、<code>chrome.identity</code> API が管理します。本拡張のコード内では永続化しません。トークンは、ユーザーが「ログアウト」を押すか、Google アカウント側で認可を取り消すことで失効します。</p>
+
+    <h2>7. お問い合わせ</h2>
+    <p>本拡張機能に関するお問い合わせは、株式会社さくらフォレスト 担当者（<a href="mailto:kamada@sakuraforest.co.jp">kamada@sakuraforest.co.jp</a>）までご連絡ください。</p>
+
+    <p class="last-updated">最終更新日: 2026年5月7日</p>
+  </body>
+</html>
