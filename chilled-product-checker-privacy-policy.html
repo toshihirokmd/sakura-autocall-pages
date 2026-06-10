@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>冷蔵・通常商品混在チェッカー｜プライバシーポリシー</title>
+  <style>
+    :root {
+      --green: #17683B;
+      --green-light: #e8f1ec;
+      --ink: #2b2b2b;
+      --sub: #5a6b60;
+      --line: #d9e3dc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Hiragino Maru Gothic ProN", "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--ink);
+      line-height: 1.9;
+      margin: 0;
+      background: #f6f8f6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+    header { border-bottom: 3px solid var(--green); padding-bottom: 20px; margin-bottom: 36px; }
+    h1 { color: var(--green); font-size: 24px; margin: 0 0 8px; letter-spacing: 0.02em; }
+    .meta { color: var(--sub); font-size: 13px; }
+    h2 {
+      color: var(--green); font-size: 18px; margin: 36px 0 12px;
+      padding-left: 14px; border-left: 5px solid var(--green); line-height: 1.4;
+    }
+    p, li { font-size: 15px; color: var(--ink); }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: 14px;
+      padding: 20px 26px; margin-top: 14px;
+    }
+    .highlight {
+      background: var(--green-light); border-radius: 12px;
+      padding: 16px 22px; margin: 18px 0; font-weight: 600; color: var(--green);
+    }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--sub); font-size: 13px; }
+    a { color: var(--green); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>冷蔵・通常商品混在チェッカー｜プライバシーポリシー</h1>
+      <div class="meta">最終更新日：2026年6月10日 ／ 提供：さくらフォレスト株式会社</div>
+    </header>
+
+    <p>
+      本プライバシーポリシーは、Chrome拡張機能「冷蔵・通常商品混在チェッカー」（以下「本拡張機能」）における
+      情報の取り扱いについて定めるものです。本拡張機能は、社内CRM（受注管理画面）での
+      冷蔵商品と通常商品の混在出荷を防止することを唯一の目的とした業務支援ツールです。
+    </p>
+
+    <div class="highlight">
+      本拡張機能は、いかなる個人情報・利用データも収集・保存・外部送信しません。
+    </div>
+
+    <h2>1. 収集する情報</h2>
+    <div class="card">
+      <p>本拡張機能は、利用者の個人情報やブラウザの利用履歴を<strong>一切収集しません</strong>。</p>
+      <p>
+        対象の社内CRM受注画面に表示されている「商品名」を画面上から読み取りますが、
+        これはその場で冷蔵商品の混在を判定するためにのみ使用し、
+        どこにも保存しません（chrome.storage等への保存も行いません）。
+      </p>
+    </div>
+
+    <h2>2. 情報の使用目的</h2>
+    <ul>
+      <li>受注内に冷蔵商品と通常商品が混在しているかを判定し、警告を表示するため</li>
+      <li>上記以外の目的では、読み取った情報を一切使用しません</li>
+    </ul>
+
+    <h2>3. 情報の送信・共有</h2>
+    <div class="card">
+      <p>
+        本拡張機能は、読み取った情報を含むいかなるデータも、
+        外部サーバーや第三者へ<strong>送信・共有・販売することはありません</strong>。
+        すべての処理は利用者のブラウザ内で完結します。
+      </p>
+    </div>
+
+    <h2>4. 第三者への提供</h2>
+    <p>本拡張機能が取得する情報はありませんが、仮にも取得した情報を第三者へ提供することはありません。</p>
+
+    <h2>5. データの保存と削除</h2>
+    <ul>
+      <li>本拡張機能はデータを保存しないため、削除すべきデータは存在しません</li>
+      <li>拡張機能をアンインストールすれば、関連する一切の動作は停止します</li>
+    </ul>
+
+    <h2>6. 動作対象範囲</h2>
+    <p>
+      本拡張機能は、以下のページでのみ動作します。これ以外のサイトやタブにはアクセスしません。
+    </p>
+    <ul>
+      <li>https://sakura-forest.com/crm/*</li>
+      <li>https://stg.sakura-forest.com/crm/*（検証環境）</li>
+    </ul>
+
+    <h2>7. お問い合わせ先</h2>
+    <p>
+      本ポリシーに関するお問い合わせは、下記までご連絡ください。<br>
+      さくらフォレスト株式会社<br>
+      担当：コールセンター業務改善担当<br>
+      メール：<a href="mailto:kamada@sakuraforest.co.jp">kamada@sakuraforest.co.jp</a>
+    </p>
+
+    <footer>
+      © 2026 さくらフォレスト株式会社 ／ 冷蔵・通常商品混在チェッカー
+    </footer>
+  </div>
+</body>
+</html>
