@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>架電入力ポップアップ（さくらフォレスト社内用）プライバシーポリシー</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body { font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+         max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; color: #222; }
+  h1 { border-bottom: 2px solid #17683B; padding-bottom: .3rem; }
+  h2 { border-left: 4px solid #17683B; padding-left: .6rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ccc; padding: .5rem .8rem; text-align: left; vertical-align: top; }
+  th { background: #f0f6f1; }
+  code { background: #f5f5f5; padding: 0 .3em; border-radius: 3px; }
+  .meta { color: #666; font-size: .9em; }
+  .note { background: #fff8e1; border-left: 4px solid #f1c40f; padding: .8rem 1rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+
+<h1>架電入力ポップアップ（さくらフォレスト社内用）プライバシーポリシー</h1>
+<p class="meta">最終更新日: 2026 年 10 月 6 日</p>
+
+<p>
+本書は、さくらフォレスト株式会社（以下「当社」）が提供する Chrome 拡張機能
+<strong>「架電入力ポップアップ」</strong>（以下「本拡張機能」）における情報の取扱いについて定めるものです。
+本拡張機能は当社のコンタクトセンターにおける架電（アウトバウンド）業務の記録を効率化するための<strong>社内向け業務ツール</strong>であり、
+当社の従業員（オペレーター）のみが利用します。一般のお客様に向けて配布するものではありません。
+</p>
+
+<h2>1. 取得・処理する情報</h2>
+<p>本拡張機能は、当社が管理する Google スプレッドシート（架電リスト）上で、以下の情報を取り扱います。</p>
+<table>
+  <thead>
+    <tr><th>情報の種類</th><th>取得方法</th><th>利用目的</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>架電リストの選択行の内容（顧客 ID・氏名・電話番号など）</td>
+      <td>オペレーターが選択した行を、Google Sheets API でオペレーター本人の権限により読み取り</td>
+      <td>入力ポップアップにどの顧客の記録かを表示するため、および保存直前に同じ顧客の行であることを確認するため</td>
+    </tr>
+    <tr>
+      <td>架電結果の入力内容（話した／メモ／提案結果／自由記述など）</td>
+      <td>オペレーターがポップアップに入力</td>
+      <td>架電業務の記録・集計</td>
+    </tr>
+    <tr>
+      <td>フォーム設定（入力項目の定義）</td>
+      <td>同じスプレッドシートの「フォーム設定」タブから読み取り</td>
+      <td>ポップアップに表示する入力項目の決定。顧客の個人情報は含みません</td>
+    </tr>
+    <tr>
+      <td>操作したオペレーターの Google アカウントのメールアドレス</td>
+      <td>Chrome の <code>identity</code> API で取得</td>
+      <td>記録の「実施者」欄に記入するため</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>2. 情報の保存先・送信先</h2>
+<table>
+  <thead>
+    <tr><th>項目</th><th>保存先・送信先</th><th>保存期間</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>架電結果の入力内容・実施者・実施日</td>
+      <td>オペレーターが開いている当社管理の Google スプレッドシート（同じ行への書き戻し、および同じスプレッドシート内の「記録_タブ名」タブ）</td>
+      <td>業務記録として当社が保管</td>
+    </tr>
+    <tr>
+      <td>Google API のアクセストークン</td>
+      <td>Chrome の <code>identity</code> API が管理（本拡張機能は独自に保存しません）</td>
+      <td>Chrome の管理に従う</td>
+    </tr>
+    <tr>
+      <td>フォーム設定・見出しの一時的な控え</td>
+      <td>拡張機能のメモリ上のみ（ディスクには保存しません）</td>
+      <td>最大 10 分、またはブラウザの再起動まで</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+本拡張機能は <code>chrome.storage</code> などのブラウザ内ストレージに顧客情報を保存しません。
+読み書きはすべて Google Sheets API（<code>sheets.googleapis.com</code>）を通じ、オペレーター本人の Google アカウントの権限で、
+本人が編集権限を持つスプレッドシートに対してのみ行います。
+</p>
+
+<h2>3. 外部送信に関する宣言</h2>
+<div class="note">
+  本拡張機能は、Google Sheets API（当社が管理する Google スプレッドシート）以外には
+  <strong>いかなる外部サーバーにもデータを送信しません</strong>。
+  広告ネットワーク、アクセス解析サービス、第三者のトラッキング SDK は一切組み込まれていません。
+  取得した情報を販売したり、本来の業務目的以外に利用・転送したりすることはありません。
+</div>
+
+<h2>4. 健康に関する情報の取扱い</h2>
+<p>
+当社は健康食品を取り扱っているため、架電結果の自由記述欄に、お客様の体調や商品の体感に関する内容が含まれる場合があります。
+これらの情報は架電業務の記録のためにのみ利用し、当社が管理する上記の保存先以外には送信しません。
+</p>
+
+<h2>5. データの削除</h2>
+<ul>
+  <li>本拡張機能はブラウザ内に顧客情報を保存しないため、アンインストール後に端末に顧客情報は残りません。</li>
+  <li>Google スプレッドシートに記録された業務データの削除をご希望の場合は、後述のお問い合わせ先までご連絡ください。</li>
+</ul>
+
+<h2>6. セキュリティ対策</h2>
+<ul>
+  <li>本拡張機能は Google スプレッドシート（<code>docs.google.com/spreadsheets</code>）上でのみ動作し、架電リストの形式を持つタブでのみ入力ポップアップを表示します。</li>
+  <li>Google サービスとの通信はすべて TLS（HTTPS）で暗号化されます。</li>
+  <li>OAuth の同意画面は当社の Google Workspace 内部ユーザーに限定しています。</li>
+  <li>本拡張機能は当社従業員の業務端末でのみ利用されます。</li>
+</ul>
+
+<h2>7. 改定</h2>
+<p>
+本ポリシーは、関係法令の改正、本拡張機能の機能変更等にあわせて改定する場合があります。
+重要な変更が発生した場合は、本ページにて告知します。
+</p>
+
+<h2>8. お問い合わせ先</h2>
+<p>
+さくらフォレスト株式会社<br />
+コンタクトセンター事業部<br />
+担当: 鎌田<br />
+メール: <a href="mailto:kamada@sakuraforest.co.jp">kamada@sakuraforest.co.jp</a>
+</p>
+
+<hr />
+<p class="meta">© さくらフォレスト株式会社</p>
+
+</body>
+</html>
