@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>着信ポップアップ（さくらフォレスト社内用）プライバシーポリシー</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body { font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+         max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; color: #222; }
+  h1 { border-bottom: 2px solid #17683B; padding-bottom: .3rem; }
+  h2 { border-left: 4px solid #17683B; padding-left: .6rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ccc; padding: .5rem .8rem; text-align: left; vertical-align: top; }
+  th { background: #f0f6f1; }
+  code { background: #f5f5f5; padding: 0 .3em; border-radius: 3px; }
+  .meta { color: #666; font-size: .9em; }
+  .note { background: #fff8e1; border-left: 4px solid #f1c40f; padding: .8rem 1rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+
+<h1>着信ポップアップ（さくらフォレスト社内用）プライバシーポリシー</h1>
+<p class="meta">最終更新日: 2026 年 10 月 13 日</p>
+
+<p>
+本書は、さくらフォレスト株式会社（以下「当社」）が提供する Chrome 拡張機能
+<strong>「着信ポップアップ」</strong>（以下「本拡張機能」）における情報の取扱いについて定めるものです。
+本拡張機能は、当社のコンタクトセンターでお客様からの折り返しのお電話を受けるときに、応対用の台本を表示する<strong>社内向け業務ツール</strong>であり、
+当社の従業員（オペレーター）のみが利用します。一般のお客様に向けて配布するものではありません。
+</p>
+
+<h2>1. 取得・処理する情報</h2>
+<table>
+  <thead>
+    <tr><th>情報の種類</th><th>取得方法</th><th>利用目的</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>着信した電話番号</td>
+      <td>当社が契約する電話システム（HybridConnect）の画面に表示された番号を読み取り</td>
+      <td>当社の架電リストに載っているお客様かどうかを調べるため</td>
+    </tr>
+    <tr>
+      <td>商材名・応対用の台本</td>
+      <td>当社の照会サーバーから受け取り（当社管理の Google スプレッドシートの内容）</td>
+      <td>ポップアップに表示するため。お客様の氏名・住所などは含みません</td>
+    </tr>
+    <tr>
+      <td>照会サーバーの接続先 URL と合言葉（接続設定）</td>
+      <td>オペレーターが拡張機能の設定画面で入力</td>
+      <td>当社の照会サーバーに接続するため</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>2. 情報の保存先・送信先</h2>
+<table>
+  <thead>
+    <tr><th>項目</th><th>保存先・送信先</th><th>保存期間</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>着信した電話番号</td>
+      <td>当社が管理する照会サーバー（Google Cloud 上、当社の Google スプレッドシートを参照）へ送信。照会サーバーは番号を記録・保存しません</td>
+      <td>拡張機能のメモリ上で通話中のみ保持し、通話が終わると破棄（ディスクには保存しません）</td>
+    </tr>
+    <tr>
+      <td>商材名・台本</td>
+      <td>拡張機能のメモリ上のみ</td>
+      <td>通話中のみ（通話終了・ポップアップを閉じた時点で破棄）</td>
+    </tr>
+    <tr>
+      <td>接続設定（接続先 URL・合言葉）</td>
+      <td>ブラウザの拡張機能用ストレージ（<code>chrome.storage.sync</code>）</td>
+      <td>オペレーターが設定を変更・削除するか、本拡張機能をアンインストールするまで</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. 外部送信に関する宣言</h2>
+<div class="note">
+  本拡張機能は、当社が管理する照会サーバー以外には<strong>いかなる外部サーバーにもデータを送信しません</strong>。
+  広告ネットワーク、アクセス解析サービス、第三者のトラッキング SDK は一切組み込まれていません。
+  取得した情報を販売したり、本来の業務目的以外に利用・転送したりすることはありません。
+</div>
+
+<h2>4. 表示する画面について</h2>
+<p>
+オペレーターは通話中に、電話システムの画面のほか、顧客管理システムや受注画面など複数の画面を行き来します。
+そのため本拡張機能は、通話中に限り、オペレーターがいま見ているタブにポップアップを重ねて表示します。
+表示先のページの内容を読み取ったり、送信したり、変更したりすることはありません（電話番号を読み取るのは電話システムの画面だけです）。
+</p>
+
+<h2>5. データの削除</h2>
+<ul>
+  <li>本拡張機能は電話番号や台本を端末に保存しないため、通話が終われば端末に残りません。</li>
+  <li>接続設定は、設定画面で消去するか、本拡張機能をアンインストールすると削除されます。</li>
+</ul>
+
+<h2>6. セキュリティ対策</h2>
+<ul>
+  <li>照会サーバーとの通信はすべて TLS（HTTPS）で暗号化されます。</li>
+  <li>照会サーバーは合言葉が一致する要求にだけ応答し、架電リストに無い番号には何も返しません。</li>
+  <li>スプレッドシートを読む権限は照会サーバーだけが持ち、拡張機能には含まれていません。</li>
+  <li>本拡張機能は当社従業員の業務端末でのみ利用されます。</li>
+</ul>
+
+<h2>7. 改定</h2>
+<p>
+本ポリシーは、関係法令の改正、本拡張機能の機能変更等にあわせて改定する場合があります。
+重要な変更が発生した場合は、本ページにて告知します。
+</p>
+
+<h2>8. お問い合わせ先</h2>
+<p>
+さくらフォレスト株式会社<br />
+コンタクトセンター事業部<br />
+担当: 鎌田<br />
+メール: <a href="mailto:kamada@sakuraforest.co.jp">kamada@sakuraforest.co.jp</a>
+</p>
+
+<hr />
+<p class="meta">© さくらフォレスト株式会社</p>
+
+</body>
+</html>
