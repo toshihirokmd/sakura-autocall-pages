@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>推し声 着信通知（さくらフォレスト社内用）プライバシーポリシー</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body { font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+         max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; color: #222; }
+  h1 { border-bottom: 2px solid #17683B; padding-bottom: .3rem; }
+  h2 { border-left: 4px solid #17683B; padding-left: .6rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ccc; padding: .5rem .8rem; text-align: left; vertical-align: top; }
+  th { background: #f0f6f1; }
+  code { background: #f5f5f5; padding: 0 .3em; border-radius: 3px; }
+  .meta { color: #666; font-size: .9em; }
+  .note { background: #fff8e1; border-left: 4px solid #f1c40f; padding: .8rem 1rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+
+<h1>推し声 着信通知（さくらフォレスト社内用）プライバシーポリシー</h1>
+<p class="meta">最終更新日: 2026 年 10 月 14 日</p>
+
+<p>
+本書は、さくらフォレスト株式会社（以下「当社」）が提供する Chrome 拡張機能
+<strong>「推し声 着信通知」</strong>（以下「本拡張機能」）における情報の取扱いについて定めるものです。
+本拡張機能は、当社のコンタクトセンターで使用している CTI（HybridConnect）の着信音を、
+利用者が取り込んだ音声に置き換えて鳴らすための<strong>社内向け業務ツール</strong>であり、
+当社の従業員のみが利用します。一般のお客様に向けて配布するものではありません。
+</p>
+
+<h2>1. 取得・処理する情報</h2>
+<p>本拡張機能が扱う情報は以下に限られます。<strong>お客様の氏名・電話番号・通話内容などの個人情報は取得しません。</strong></p>
+<table>
+  <thead>
+    <tr><th>情報の種類</th><th>取得方法</th><th>利用目的</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>利用者が選んだ音声ファイル（10 秒以内）とそのファイル名・長さ</td>
+      <td>利用者が拡張機能の画面で自分で選択</td>
+      <td>着信時に、CTI の着信音の代わりに鳴らすため</td>
+    </tr>
+    <tr>
+      <td>設定（着信通知のオン・オフ、通知音量）</td>
+      <td>利用者が拡張機能の画面で操作</td>
+      <td>利用者の設定を次回以降も維持するため</td>
+    </tr>
+    <tr>
+      <td>CTI 画面上の着信音の再生状態（鳴っている／止まった）</td>
+      <td>HybridConnect の画面上で、着信音の再生・停止だけを検知</td>
+      <td>着信音が鳴ったときに置き換え音声を鳴らし、応答・終了で止めるため。画面の文字や顧客情報は読み取りません</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+「接続状態を確認」ボタンを押したときは、CTI 画面上の音声要素の数と確認時刻のみを拡張機能の画面に表示します。
+この結果は保存も送信もしません。
+</p>
+
+<h2>2. 情報の保存先・送信先</h2>
+<table>
+  <thead>
+    <tr><th>項目</th><th>保存先</th><th>保存期間</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>取り込んだ音声・設定</td>
+      <td>利用者のブラウザ内（Chrome の拡張機能用ストレージ）のみ</td>
+      <td>利用者が「登録音声を削除」するか、本拡張機能をアンインストールするまで</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+保存先は利用者のブラウザ内に限られ、Google アカウントの同期機能による他の端末への複製も行いません。
+</p>
+
+<h2>3. 外部送信に関する宣言</h2>
+<div class="note">
+  本拡張機能は、<strong>いかなる外部サーバーにもデータを送信しません</strong>。
+  取り込んだ音声・設定・CTI 画面の情報は、利用者の端末の外に出ることはありません。
+  広告ネットワーク、アクセス解析サービス、第三者のトラッキング SDK は一切組み込まれていません。
+  情報を販売したり、本来の目的以外に利用・転送したりすることはありません。
+</div>
+
+<h2>4. 健康に関する情報の取扱い</h2>
+<p>
+本拡張機能は通話内容や顧客情報を読み取らないため、お客様の健康に関する情報を取得することはありません。
+</p>
+
+<h2>5. データの削除</h2>
+<ul>
+  <li>拡張機能の画面の「詳細設定」→「登録音声を削除」で、取り込んだ音声をいつでも削除できます。</li>
+  <li>本拡張機能をアンインストールすると、ブラウザ内に保存された音声と設定はすべて削除されます。</li>
+</ul>
+
+<h2>6. セキュリティ対策</h2>
+<ul>
+  <li>本拡張機能が動作するのは HybridConnect の画面（<code>*.hybridconnect.jp</code>）のみです。</li>
+  <li>録音、マイクの利用、画面の取り込み、外部との通信は行いません。</li>
+  <li>「拡張機能の制御を解除する」を押すと、CTI 本来の着信音に戻ります。</li>
+  <li>本拡張機能は当社従業員の業務端末でのみ利用されます。</li>
+</ul>
+
+<h2>7. 改定</h2>
+<p>
+本ポリシーは、関係法令の改正、本拡張機能の機能変更等にあわせて改定する場合があります。
+重要な変更が発生した場合は、本ページにて告知します。
+</p>
+
+<h2>8. お問い合わせ先</h2>
+<p>
+さくらフォレスト株式会社<br />
+コンタクトセンター事業部<br />
+担当: 鎌田<br />
+メール: <a href="mailto:kamada@sakuraforest.co.jp">kamada@sakuraforest.co.jp</a>
+</p>
+
+<hr />
+<p class="meta">© さくらフォレスト株式会社</p>
+
+</body>
+</html>
